@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Liquid Glass Photo Editor</title>
+<title>Foto Editor V2 PCD </title>
 
 <style>
 
@@ -551,6 +551,63 @@ input[type="range"]::-webkit-slider-thumb:hover{
 /* PHOTO BOX                                              */
 /* ===================================================== */
 
+/* ================= CANVAS FIX ================= */
+
+
+/* ================= CANVAS FIX ================= */
+
+/* FIX UTAMA CROP CURSOR */
+canvas{
+    border-radius:22px;
+    cursor:default;
+}
+
+/* saat crop aktif */
+canvas.crop-mode{
+    cursor:crosshair !important;
+}
+
+/* ================= TOOL BUTTON ================= */
+
+.tool-btn{
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ================= FILTER PREVIEW FIX ================= */
+
+.filter-preview canvas{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    cursor:default; /* FIX pointer tidak berubah */
+}
+
+/* ================= CROP WARNING ================= */
+
+.crop-warning{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:none;
+    padding:14px 22px;
+    border-radius:999px;
+    color:white;
+    background:rgba(16,185,129,0.18);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(16,185,129,0.35);
+    z-index:99;
+}
+
+
 .photo-box{
 
     flex:1;
@@ -806,7 +863,7 @@ value="0">
 
 <div class="topbar">
 
-<h2>Liquid Glass Editor</h2>
+<h2>PROJECT PCD✨</h2>
 
 <label class="upload-btn">
 
